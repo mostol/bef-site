@@ -2,16 +2,22 @@
   "name": "bef",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @11ty/eleventy"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostol/bef-site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
+  "bugs": {
+    "url": "https://github.com/mostol/bef-site/issues"
+  },
+  "homepage": "https://github.com/mostol/bef-site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
   }
 }
