@@ -1,0 +1,11 @@
+<header>
+  <a href="..">BEF!</a>
+  <ul>
+  {%- for page in collections.navbar | sort(false, false, 'data.order') -%}
+  <!-- See https://github.com/11ty/eleventy/issues/898#issuecomment-897071947 for ordering.--> 
+    <li>
+      <a href="{{ page.url }}">{{ page.data.title }}</a>
+    </li>
+  {%- endfor -%}
+  </ul>
+</header>

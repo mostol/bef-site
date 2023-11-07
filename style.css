@@ -1,0 +1,19 @@
+:root {
+  /* Global CSS variables */
+  --darkblue: #14212a;
+  --red: #ff5656;
+  --yellow: #ffe500;
+  --green: #19c15f;
+  --blue: #0c8dc9;
+  --orange: #ffa061;
+}
+
+:root {
+  /* Global styling */
+  font-family: "Outfit", sans-serif;
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url('../fonts/Outfit-Variable.woff2');
+}
