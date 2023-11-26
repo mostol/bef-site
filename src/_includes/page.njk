@@ -1,3 +1,8 @@
-{% extends "base.njk" %}
-{% block title %}{{ title }}{% endblock %}
-{% block body %}{{ content | safe }}{% endblock %}
+---
+layout: base
+---
+{% include "_header.njk" %}
+<main>
+  {{ content | safe }}
+</main>
+{% include "_footer.njk" %}

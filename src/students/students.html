@@ -1,0 +1,26 @@
+---
+layout: page
+title: Students
+tags:
+  - navbar
+order: 3
+---
+<section>
+  <header>
+    <h1>Meet out students!</h1>
+  </header>
+  <p>
+    The women we sponsor have faced a wide range of challenges—but have even wider ambitions. With your support and the opportunities opened by further education, they've been able to turn their dreams into realities.
+  </p>
+  <h2>Students</h2>
+  <div class="cards">
+  {% for student in students %}
+    <article class="student-card">
+      <hgroup>
+        <h3>{{ student.name }}</h3>
+        <p>{{ student.program }}</p>
+      </hgroup>
+      <img alt="Photo of {{student.name}}, a BEF student." src="/img/students/{{ student.image }}">
+    </article>
+  {% endfor %}
+</section>

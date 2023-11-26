@@ -1,19 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
-  <!-- Grab title from the page data and dump it here -->
-  <title>Brockbank Education Fund | {% block title %}{%endblock%}</title>
-</head>
-<body>
-  {% include "_banner.njk" %}
-  {% include  "_nav.njk" %}
-  <!-- Grab the content from the page data and dump it here, and mark it as safe -->
-  <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
-  {% block body %}{% endblock %}
-  {% include "_footer.njk" %}
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>BEF | {{ title }}</title>
+  </head>
+  <body>
+    {{ content | safe }}
+  </body>
 </html>
