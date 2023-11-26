@@ -9,7 +9,7 @@
   --s-3: calc(var(--s-2) / var(--ratio));
   --s-2: calc(var(--s-1) / var(--ratio));
   --s-1: calc(var(--s0) / var(--ratio));
-  --s0: 1rem;
+  --s0: 1em;
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
@@ -253,4 +253,45 @@ a.button {
 .donor-box {
   background-color: white;
   border-radius: var(--s-2);
+}
+
+.student-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--s-2);
+
+  padding: var(--s-2);
+
+
+  font-size: var(--s-1);
+  background-color: var(--accent);
+  color: var(--base);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.student-card > hgroup {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-card img {
+  object-fit: cover;
+  width: 80%;
+  height: 80%;
+
+  --pad: var(--s1);
+  padding: var(--pad);
+
+  border-radius: 50%;
+  outline: solid var(--s-2) var(--base);
+  outline-offset: calc(-1 * var(--pad));
 }

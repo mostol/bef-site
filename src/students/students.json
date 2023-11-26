@@ -1,0 +1,64 @@
+{
+  "students": [
+    {
+      "name": "Sizipiwe",
+      "program": "Marriage and Family Studies",
+      "image": "sizipiwe.jpg"
+    },
+    {
+      "name": "Bernadene",
+      "program": "Accounting Certificate",
+      "image": "bernadene.jpg"
+    },
+    {
+      "name": "Bianca",
+      "program": "Bachelor of Professional Studies",
+      "image": "bianca.jpg"
+    },
+    {
+      "name": "Thobeka",
+      "program": "Bachelor of Professional Studies",
+      "image": "thobeka.jpg"
+    },
+    {
+      "name": "Yanga",
+      "program": "Bachelor of Professional Studies",
+      "image": "yanga.jpg"
+    },
+    {
+      "name": "Amandla",
+      "program": "Events Management Certificate",
+      "image": "amandla.jpg"
+    },
+    {
+      "name": "Nombuyiseli",
+      "program": "Wealth Management Certificate",
+      "image": "nombuyiseli.jpg"
+    },
+    {
+      "name": "Siyakholwa",
+      "program": "Bachelor of Professional Studies",
+      "image": "siyakholwa.jpg"
+    },
+    {
+      "name": "Fezeka",
+      "program": "Family History Research Studies",
+      "image": "fezeka.jpg"
+    },
+    {
+      "name": "Anelisa",
+      "program": "Copywriting for Digital Marketing",
+      "image": "anelisa.jpg"
+    },
+    {
+      "name": "Lisakhanya",
+      "program": "Bachelors in Applied Science",
+      "image": "lisakhanya.jpg"
+    },
+    {
+      "name": "Bongiwe",
+      "program": "Social & Behavioral Studies",
+      "image": "bongiwe.jpg"
+    }
+  ]
+}
