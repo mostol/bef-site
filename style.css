@@ -234,9 +234,9 @@ section > div {
 a.button {
   font-weight: bold;
   //font-size: var(--s0);
-  padding: 0.3em 0.5em;
+  padding: var(--s-2) var(--s0);
   text-decoration: none;
-  border-radius: 0.3em;
+  border-radius: var(--s-2);
 }
 
 .filled {
@@ -248,4 +248,9 @@ a.button {
   outline: solid var(--stroke) var(--accent);
   outline-offset: calc(-1 * var(--stroke));
   color: var(--accent);
+}
+
+.donor-box {
+  background-color: white;
+  border-radius: var(--s-2);
 }
