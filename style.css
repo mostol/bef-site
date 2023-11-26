@@ -285,13 +285,12 @@ a.button {
 
 .student-card img {
   object-fit: cover;
+  aspect-ratio: 1/1;
   width: 80%;
   height: 80%;
 
-  --pad: var(--s1);
+  --pad: var(--s-1);
   padding: var(--pad);
 
   border-radius: 50%;
-  outline: solid var(--s-2) var(--base);
-  outline-offset: calc(-1 * var(--pad));
 }
