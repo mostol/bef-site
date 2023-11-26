@@ -44,6 +44,10 @@
   font-size: calc(1rem + 0.25vw);
 }
 
+a:visited, a:hover, a:active {
+  color: inherit;
+}
+
 /************
 * CSS RESET *
 ************/
@@ -205,9 +209,6 @@ section {
   gap: var(--s0);
 }
 
-section > header {
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   line-height: 0.9;
@@ -239,19 +240,19 @@ a.button {
   border-radius: var(--s-2);
 }
 
-.filled {
+a.filled {
   background-color: var(--accent);
-  color: var(--base)
+  color: var(--base);
 }
 
-.outlined {
+a.outlined {
   outline: solid var(--stroke) var(--accent);
   outline-offset: calc(-1 * var(--stroke));
   color: var(--accent);
 }
 
 .donor-box {
-  background-color: white;
+  background-color: var(--accent);
   border-radius: var(--s-2);
 }
 
