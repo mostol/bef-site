@@ -1,19 +1,251 @@
+/*****************
+* Global styling *
+*****************/
+
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
 :root {
   /* Global CSS variables */
+  /* Colors */
   --darkblue: #14212a;
   --red: #ff5656;
   --yellow: #ffe500;
   --green: #19c15f;
   --blue: #0c8dc9;
   --orange: #ffa061;
+
+  /* Base color scheme */
+  --primary: var(--darkblue);
+  --secondary: ivory;
+
+  /* Thicknesses */
+  --stroke: var(--s-4);
+
+  /* Units and measures */
+  --measure: 36rem;
 }
 
 :root {
   /* Global styling */
   font-family: "Outfit", sans-serif;
+  font-size: calc(1rem + 0.25vw);
 }
+
+/************
+* CSS RESET *
+************/
+
+/* BEGIN CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+
+  background-color: var(--secondary);
+}
+/* END CSS RESET */
 
 @font-face {
   font-family: Outfit;
   src: url('../fonts/Outfit-Variable.woff2');
+}
+
+* {
+  max-inline-size: var(--measure);
+}
+
+html, body, div, section, header, nav, main, footer {
+  /* Allow non-text, box-like lements to be full-width */
+  max-inline-size: none;
+}
+
+
+
+/***************
+* Layout stuff *
+***************/
+
+
+main {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: var(--s3);
+
+  padding-block: var(--s1) var(--s2);
+  padding-inline: var(--s1);
+
+  /* Color scheme */
+  --base: var(--primary);
+  --accent: var(--secondary);
+
+  background-color: var(--base);
+  color: var(--accent);
+}
+
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-lockup > * {
+  min-height: 100%;
+  padding: 1%
+}
+
+.logo-lockup > .logotype {
+  min-height: 90%
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: var(--s-2) var(--s0);
+
+  /* Color scheme */
+  --base: var(--secondary);
+  --accent: var(--primary);
+
+  background-color: var(--base);
+  color: var(--accent);
+}
+
+.site-header > .logo-lockup {
+  height: 2.6rem;
+}
+
+.site-header > nav > ul > * {
+  display: inline;
+  padding-inline: var(--s0);
+}
+
+.site-header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.site-header a {
+  /* Remove link styling in the header */
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+.site-header > :first-child {
+  flex-grow: 1;
+}
+
+.site-header > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+footer {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--s1);
+
+  /* Color scheme */
+  --base: var(--secondary);
+  --accent: var(--primary);
+
+  background-color: var(--base);
+  color: var(--accent);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, var(--s0));
+}
+
+section {
+  display: flex;
+  flex-flow: column;
+  gap: var(--s0);
+}
+
+section > header {
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+h1 {
+  font-size: clamp(var(--s1), 10vw, var(--s3));
+}
+
+h2 {
+  font-size: clamp(var(--s1), 10vw, var(--s2));
+}
+
+h3, h4, h5, h6 {
+  font-size: clamp(var(--s1), 10vw, var(--s1));
+}
+
+section > div {
+  display: flex;
+  flex-flow: column;
+  gap: var(--s0);
+}
+
+a.button {
+  font-weight: bold;
+  //font-size: var(--s0);
+  padding: 0.3em 0.5em;
+  text-decoration: none;
+  border-radius: 0.3em;
+}
+
+.filled {
+  background-color: var(--accent);
+  color: var(--base)
+}
+
+.outlined {
+  outline: solid var(--stroke) var(--accent);
+  outline-offset: calc(-1 * var(--stroke));
+  color: var(--accent);
 }
