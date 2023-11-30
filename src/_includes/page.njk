@@ -1,8 +1,15 @@
 ---
 layout: base
 ---
+{%- for ann in collections.announcement -%}
+  {%- if ann.data.active -%}
+    <div class="announcement {{ ann.data.style }}">
+      <small>{{ ann.content | safe }}</small>
+    </div>
+  {%- endif -%}
+{%- endfor -%}
 {% include "_header.njk" %}
-<main>
-  {{ content | safe }}
-</main>
+  <main>
+    {{ content | safe }}
+  </main>
 {% include "_footer.njk" %}

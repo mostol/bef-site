@@ -295,3 +295,13 @@ a.outlined {
 
   border-radius: 50%;
 }
+
+div.announcement {
+  text-align: center;
+  line-height: 1.0;
+  padding: var(--s-3);
+}
+
+div.announcement.notice {
+  background-color: var(--green);
+}
