@@ -14,7 +14,8 @@ order: 3
   </p>
   <h2>Current students</h2>
   <div class="cards">
-  {% for student in students %}
+  {% for item in students %}
+  {% assign student = item[1] %}
     <article class="student-card">
       <hgroup>
         <h3>{{ student.name }}</h3>
