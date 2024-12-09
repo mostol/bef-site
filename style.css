@@ -234,7 +234,7 @@ section > div {
 
 a.button {
   font-weight: bold;
-  //font-size: var(--s0);
+  /* font-size: var(--s0); */
   padding: var(--s-2) var(--s0);
   text-decoration: none;
   border-radius: var(--s-2);
