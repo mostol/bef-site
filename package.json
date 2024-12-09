@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/mostol/bef-site#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   }
 }
