@@ -16,6 +16,7 @@ order: 3
   <div class="cards">
   {% for item in students %}
   {% assign student = item[1] %}
+  {% if student.status == "current" %}
     <article class="student-card">
       <hgroup>
         <h3>{{ student.name }}</h3>
@@ -23,5 +24,6 @@ order: 3
       </hgroup>
       <img alt="Photo of {{student.name}}, a BEF student." src="/img/students/{{ student.image }}">
     </article>
+  {% endif %}
   {% endfor %}
 </section>
