@@ -284,6 +284,11 @@ a.outlined {
   justify-content: center;
 }
 
+/* All items in a student-card hgroup should be center-aligned */
+.student-card > hgroup > * {
+  text-align: center;
+}
+
 .student-card img {
   object-fit: cover;
   aspect-ratio: 1/1;
